@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: rgb(54,35,66);
+		}
+		div{
+			position: absolute;
+  			left: 50%;
+  			top: 50%;
+  			-webkit-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+		}
+		button{
+			width: 150px;
+			height: 150px;
+			font-size: 30px;
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		var idx=[1,2,3,6,9,8,7,4];
+		var org=[1,2,3,6,9,8,7,4];
+		function clockwise(){
+		  var temp=idx[7];
+		  for(var i=7;i>0;i--){
+		    idx[i]=idx[i-1];
+		  }
+		  idx[0]=temp;
+		  for(var i=0;i<8;i++){
+		    document.getElementById("b"+org[i]).innerHTML=idx[i];
+		  }
+		}
+	</script>
+	<title>Nine Buttons</title>
+</head>
+<body>
+	<div>
+		<button id='b1'>1</button>
+		<button id='b2'>2</button>
+		<button  id='b3'>3</button>
+		<br>
+		<button id='b4'>4</button>
+		<button id='b5' onclick="clockwise()">5</button>
+		<button id='b6'>6</button>
+		<br>
+		<button id='b7'>7</button>
+		<button id='b8'>8</button>
+		<button id='b9'>9</button>
+	</div>
+</body>
+</html>
