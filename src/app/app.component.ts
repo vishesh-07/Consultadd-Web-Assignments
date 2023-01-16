@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'api-project';
+  visible:boolean=false;
+  toggle(){
+    this.visible=!this.visible;
+  }
 }

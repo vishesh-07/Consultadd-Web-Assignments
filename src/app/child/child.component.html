@@ -1,0 +1,22 @@
+
+<!-- <button (click)="showData()">Fetch Data</button> -->
+<!-- <ul>
+    <li *ngFor="let data of apiData">
+        {{data.title}}
+    </li>
+
+</ul> -->
+<table>
+    <tr>
+        <th>userId</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    <tr *ngFor="let data of apiData">
+        <td>{{data.userId}}</td>
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.body}}</td>
+    </tr>
+</table>
