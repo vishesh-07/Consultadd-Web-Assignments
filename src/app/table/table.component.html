@@ -1,0 +1,10 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+    </tr>
+    <tr *ngFor="let data of dataService.sharedTable">
+        <td>{{data.name}}</td>
+        <td>{{data.dob}}</td>
+    </tr>
+</table>
