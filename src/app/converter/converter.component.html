@@ -1,0 +1,24 @@
+<div>
+    <form [formGroup]="currencyForm" (ngSubmit)="convertCurrency()">
+        <input type="number" placeholder="Enter Currency" name="inputCur" formControlName="inputCur" class="inputField" min="1">
+        <select formControlName="currency1">
+            <option disabled>Currency 1</option>
+            <option *ngFor="let currency of currencies">
+                {{currency}}
+            </option>
+        </select>
+        <!-- <br><br> -->
+        <select formControlName="currency2">
+            <option disabled>Currency 2</option>
+            <option *ngFor="let currency of currencies">
+                {{currency}}
+            </option>
+        </select>
+        <br/><br/>
+        <button type="submit" [disabled]="currencyForm.invalid">
+            Convert Currency
+        </button>
+    </form>
+    <br><br>
+    <span>{{amount}} {{c1}} is equals to {{result}} {{c2}}</span>
+</div>

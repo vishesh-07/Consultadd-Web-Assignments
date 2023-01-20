@@ -1,0 +1,23 @@
+.inputField {
+    padding: 5px;
+    margin: 3px;
+}
+
+select {
+    padding: 5px;
+    margin: 3px;
+}
+
+button {
+    padding: 5px;
+    margin: 3px;
+    font-size: 15px;
+}
+
+div {
+    text-align: center;
+}
+span{
+    font-size: 20px;
+    font-weight: bold;
+}
