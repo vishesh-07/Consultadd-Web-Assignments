@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import DataTable from './DataTable';
+import useFetchData from './FetchData';
+import './index.css';
+import RadioForm from './RadioForm';
 function App() {
+  const [data,setData]=useFetchData('https://vishesh-07.github.io/json-api/data.json');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="heading">Birthday Sort</h1>
+      {data && <DataTable data={data}/>}
+      <RadioForm data={data} setData={setData}/>
     </div>
   );
 }
